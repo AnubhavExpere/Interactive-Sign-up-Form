@@ -15,6 +15,7 @@ p{
     font-weight: 500;
     font-size: 15px;
     display: inline-block;
+
 }
 
 .main-box{
@@ -158,7 +159,8 @@ form span{
 
 .thank-box{
     text-align: center;
-    padding:150px 0 0;
+    margin-top:30%;
+    margin-bottom: 30%;
 }
 
 #duration-section{
@@ -324,6 +326,33 @@ hr{
 }
 
 @media only screen and (max-width: 650px){
+
+    p, span, .gray-text, .addon-details, .details{
+        font-size: 18px;
+    }
+
+    .plan-grid{
+        flex-direction: column;
+    }
+
+    .plans{
+        width: 90%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .plans div {
+        /* justify-content: center; */
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-column-gap: 15px;
+        justify-items: left;
+    }
+
+    .plan-icon{
+        margin: auto 0;
+    }
+
     body{
         padding: 0px;
     }
