@@ -33,7 +33,7 @@
             <div class="text-box">
                 <div class="inner-content">
                     <h1>Select your plan</h1>
-                    <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">You have the option of monthly or yearly billing.</p>
+                    <p class="description">You have the option of monthly or yearly billing.</p>
                     <div class="plan-grid">
                         <form id="plan-form" action="addons.html">
                             <input type="radio" name="plan-radio" id="arcade-radio" onclick="selectPlan(0)" style="display: none;">
@@ -69,9 +69,7 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <!-- <a href="index.html"> -->
-                        <button id="goback-button" title="Go back" onclick="location.href='index.html'">Go Back</button>
-                    <!-- </a> -->
+                    <button id="goback-button" title="Go back" onclick="location.href='index.html'">Go Back</button>
                     <button id="next-button" title="Next Step" form="plan-form" onclick="planSelected()">Next Step</button>
                 </div>
             </div>

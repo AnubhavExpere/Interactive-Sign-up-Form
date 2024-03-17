@@ -76,6 +76,12 @@ p{
     border-color: hsl(213, 96%, 18%);
 } */
 
+.description{
+    color: hsl(231, 11%, 63%); 
+    font-weight: 400; 
+    margin-top: 0px; 
+    margin-bottom: 30px;
+}
 
 .step {           /* span element for step number*/
     color: hsl(231, 13%, 80%);
@@ -218,7 +224,7 @@ form span{
     grid-template-columns: 10% 70% 20%;
     align-items: center;
     width:100%;
-    height: 70px;
+    height: max-content;
     border: 1px solid hsl(229, 24%, 87%);
     border-radius: 5px;
     cursor: pointer;
@@ -327,9 +333,9 @@ hr{
 
 @media only screen and (max-width: 650px){
 
-    p, span, .gray-text, .addon-details, .details{
+    /* p, span, .gray-text, .addon-details, .details{
         font-size: 18px;
-    }
+    } */
 
     .plan-grid{
         flex-direction: column;
@@ -337,12 +343,15 @@ hr{
 
     .plans{
         width: 90%;
-        margin: 10px 0;
-        padding: 15px;
+        margin: 0 0 10px;
+        padding: 0 15px;
+    }
+
+    .description{
+        margin-bottom: 20px;
     }
 
     .plans div {
-        /* justify-content: center; */
         display: grid;
         grid-template-columns: max-content max-content;
         grid-column-gap: 15px;
@@ -378,7 +387,7 @@ hr{
         position: relative;
     }
     .inner-text{
-        inset:2% 10% auto 10%;
+        inset:-10% 10% auto 10%;
         display: flex;
         flex-direction: row;
     }
@@ -395,8 +404,12 @@ hr{
         border-width: 1.5px;
     }
 
+    #duration-section{
+        margin-top: 10px;
+    }
+
     .inner-content{
-        top:-60px;
+        top:-90px;
         position: relative;
         padding: 25px;
         border-radius: 10px;
@@ -414,7 +427,7 @@ hr{
     }
 
     #next-button, #goback-button{
-        margin: 20px 6% 20px;
+        margin: 12px 6% 12px;
     }
 
     .flex-container p{
