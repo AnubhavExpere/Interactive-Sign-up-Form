@@ -2,6 +2,7 @@
 <html>
     <header>
         <title>Multi-Step Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +11,6 @@
     <body>
         <div class="main-box">
             <div class="img-box">
-                <img src="assets/images/bg-sidebar-desktop.svg">
                 <div class="inner-text">
                     <div class="flex-container">
                         <span class="number">1</span>
@@ -31,45 +31,49 @@
                 </div>
             </div>
             <div class="text-box">
-                <h1>Select your plan</h1>
-                <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">You have the option of monthly or yearly billing.</p>
-                <div class="plan-grid">
-                    <form id="plan-form" action="addons.html">
-                        <input type="radio" name="plan-radio" id="arcade-radio" onclick="selectPlan(0)" style="display: none;">
-                        <input type="radio" name="plan-radio" id="advanced-radio" onclick="selectPlan(1)" style="display: none;">
-                        <input type="radio" name="plan-radio" id="pro-radio" onclick="selectPlan(2)" style="display: none;">
-                    </form>
-                    <label for="arcade-radio" class="plans">
-                        <div>
-                            <img src="assets/images/icon-arcade.svg" class="plan-icon" alt="arcade-icon"><br>
-                            <p>Arcade<br><span class="plan-prices">$9/mo</span></p>
-                        </div>
-                    </label>
-                    <label for="advanced-radio" class="plans">
-                        <div>
-                            <img src="assets/images/icon-advanced.svg"  class="plan-icon" alt="advanced-icon"><br>
-                            <p>Advanced<br><span class="plan-prices">$12/mo</span></p>
-                        </div>
-                    </label>
-                    <label for="pro-radio" class="plans">
-                        <div>
-                            <img src="assets/images/icon-pro.svg"  class="plan-icon" alt="pro-icon"><br>
-                            <p>Pro<br><span class="plan-prices">$15/mo</span></p>
-                        </div>
-                    </label>
-                </div>
-                <div id="duration-section">
-                    <p style="margin-right:20px; text-align: right;">Monthly</p>
-                    <div id="duration-switch">
-                        <input id="duration-checkbox" type="checkbox" onchange="switchDuration()">
-                        <label for="duration-checkbox" ></label>
+                <div class="inner-content">
+                    <h1>Select your plan</h1>
+                    <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">You have the option of monthly or yearly billing.</p>
+                    <div class="plan-grid">
+                        <form id="plan-form" action="addons.html">
+                            <input type="radio" name="plan-radio" id="arcade-radio" onclick="selectPlan(0)" style="display: none;">
+                            <input type="radio" name="plan-radio" id="advanced-radio" onclick="selectPlan(1)" style="display: none;">
+                            <input type="radio" name="plan-radio" id="pro-radio" onclick="selectPlan(2)" style="display: none;">
+                        </form>
+                        <label for="arcade-radio" class="plans">
+                            <div>
+                                <img src="assets/images/icon-arcade.svg" class="plan-icon" alt="arcade-icon"><br>
+                                <p>Arcade<br><span class="plan-prices">$9/mo</span></p>
+                            </div>
+                        </label>
+                        <label for="advanced-radio" class="plans">
+                            <div>
+                                <img src="assets/images/icon-advanced.svg"  class="plan-icon" alt="advanced-icon"><br>
+                                <p>Advanced<br><span class="plan-prices">$12/mo</span></p>
+                            </div>
+                        </label>
+                        <label for="pro-radio" class="plans">
+                            <div>
+                                <img src="assets/images/icon-pro.svg"  class="plan-icon" alt="pro-icon"><br>
+                                <p>Pro<br><span class="plan-prices">$15/mo</span></p>
+                            </div>
+                        </label>
                     </div>
-                    <p  style="margin-left:20px; color:hsl(231, 11%, 63%);">Yearly</p>
+                    <div id="duration-section">
+                        <p style="margin-right:20px; text-align: right;">Monthly</p>
+                        <div id="duration-switch">
+                            <input id="duration-checkbox" type="checkbox" onchange="switchDuration()">
+                            <label for="duration-checkbox" ></label>
+                        </div>
+                        <p  style="margin-left:20px; color:hsl(231, 11%, 63%);">Yearly</p>
+                    </div>
                 </div>
-                <a href="index.html">
-                    <button id="goback-button" title="Go back" onclick="">Go Back</button>
-                </a>
-                <button id="next-button" title="Next Step" form="plan-form" onclick="planSelected()">Next Step</button>
+                <div class="buttons">
+                    <a href="index.html">
+                        <button id="goback-button" title="Go back" onclick="">Go Back</button>
+                    </a>
+                    <button id="next-button" title="Next Step" form="plan-form" onclick="planSelected()">Next Step</button>
+                </div>
             </div>
         </div>
         <script src="styles.js"></script>
