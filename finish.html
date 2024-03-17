@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Multi-Step Form</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    </header>
+    <body>
+        <div class="main-box">
+            <div class="img-box">
+                <img src="assets/images/bg-sidebar-desktop.svg">
+                <div class="inner-text">
+                    <div class="flex-container">
+                        <span class="number">1</span>
+                        <p><span class="step">STEP 1</span><br>YOUR INFO</p><br>
+                    </div>  
+                    <div class="flex-container">
+                        <span class="number">2</span>
+                        <p><span class="step">STEP 2</span><br>SELECT PLAN</p><br>
+                    </div>
+                    <div class="flex-container">
+                        <span class="number">3</span>
+                        <p><span class="step">STEP 3</span><br>ADD-ONS</p><br>
+                    </div>
+                    <div class="flex-container">
+                        <span class="number" style="color:black;background-color: hsl(206, 94%, 87%); border-color: hsl(206, 94%, 87%);">4</span>
+                        <p ><span class="step">STEP 4</span><br>SUMMARY</p><br>
+                    </div>
+                </div>
+            </div>
+            <div class="text-box">
+                <h1>Finishing Up</h1>
+                <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">Double-check everything looks OK before confirming.</p>
+                <div class="total-box">
+                    <div class="final-prices">
+                        <p><span id="plan-type">Arcade</span> (<span id="plan-duration-1">Monthly</span>)<br>
+                            <a class="addon-details" href="plans.html"><u>Change</u></a>
+                        </p>
+                        <p style="text-align: right;">$<span id="plan-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                    </div>
+                    <hr>
+                    <div class="final-prices">
+                        <p class="gray-text">Online service</p>
+                        <p style="text-align: right;">+$<span id="os-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                    </div>
+                    <div class="final-prices">
+                        <p class="gray-text">Larger storage</p>
+                        <p style="text-align: right;">+$<span id="ls-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                    </div>
+                    <div class="final-prices">
+                        <p class="gray-text">Customizable Profile</p>
+                        <p style="text-align: right;">+$<span id="cp-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                    </div>
+                </div>
+                <div id="total-price" class="final-prices">
+                    <p class="gray-text">Total (per <span id="plan-duration-2">month</span>)</p>
+                    <p style="text-align: right; color: hsl(243, 100%, 62%);">$<span id="total-amount">--</span>/<span class="periodic-price">mo</span></p>
+                </div>
+                <a href="addons.html">
+                    <button id="goback-button" title="Go back">Go Back</button>
+                </a>
+                <a href="end.html">
+                    <button id="next-button" title="Confirm">Confirm</button>
+                </a>
+            </div>
+        </div>
+        <script src="styles.js"></script>
+    </body>
+</html>

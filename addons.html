@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Multi-Step Form</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    </header>
+    <body>
+        <div class="main-box">
+            <div class="img-box">
+                <img src="assets/images/bg-sidebar-desktop.svg">
+                <div class="inner-text">
+                    <div class="flex-container">
+                        <span class="number">1</span>
+                        <p><span class="step">STEP 1</span><br>YOUR INFO</p><br>
+                    </div>  
+                    <div class="flex-container">
+                        <span class="number">2</span>
+                        <p><span class="step">STEP 2</span><br>SELECT PLAN</p><br>
+                    </div>
+                    <div class="flex-container">
+                        <span class="number" style="color:black;background-color: hsl(206, 94%, 87%); border-color: hsl(206, 94%, 87%);">3</span>
+                        <p><span class="step">STEP 3</span><br>ADD-ONS</p><br>
+                    </div>
+                    <div class="flex-container">
+                        <span class="number">4</span>
+                        <p ><span class="step">STEP 4</span><br>SUMMARY</p><br>
+                    </div>
+                </div>
+            </div>
+            <div class="text-box">
+                <h1>Pick add-ons</h1>
+                <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">Add-ons help enhance your gaming experience.</p>
+                <div class="addon-grid">
+                    <label for="online-service">
+                        <div class="addons">
+                            <input id="online-service" class="addon-check" onchange="selectAddon()" type="checkbox">
+                            <p>Online service<br><span class="addon-details">Access to multiplayer games</span></p>
+                            <p class="addon-prices">+$1/mo</p>
+                        </div>
+                    </label>
+                    <label for="larger-storage">
+                        <div class="addons">
+                            <input id="larger-storage" class="addon-check" onchange="selectAddon()" type="checkbox" >
+                            <p>Larger storage<br><span class="addon-details">Extra 1TB of cloud save</span></p>
+                            <p class="addon-prices">+$2/mo</p>
+                        </div>
+                    </label>
+                    <label for="custom-profile">
+                        <div class="addons">
+                            <input type="checkbox" class="addon-check" onchange="selectAddon()" id="custom-profile">
+                            <p>Customizable Profile<br><span class="addon-details">Custom theme on your profile</span></p>
+                            <p class="addon-prices">+$2/mo</p>
+                        </div>
+                    </label>
+                </div>
+                <a href="plans.html">
+                    <button id="goback-button" title="Go back">Go Back</button>
+                </a>
+                <a href="finish.html">                
+                    <button id="next-button" title="Next Step" onclick="addOnSubmit()">Next Step</button>
+                </a>
+            </div>
+        </div>
+        <script src="styles.js"></script>
+    </body>
+</html>

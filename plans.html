@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Multi-Step Form</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    </header>
+    <body>
+        <div class="main-box">
+            <div class="img-box">
+                <img src="assets/images/bg-sidebar-desktop.svg">
+                <div class="inner-text">
+                    <div class="flex-container">
+                        <span class="number">1</span>
+                        <p><span class="step">STEP 1</span><br>YOUR INFO</p><br>
+                    </div>  
+                    <div class="flex-container">
+                        <span class="number" style="color:black;background-color: hsl(206, 94%, 87%); border-color: hsl(206, 94%, 87%);">2</span>
+                        <p><span class="step">STEP 2</span><br>SELECT PLAN</p><br>
+                    </div>
+                    <div class="flex-container">
+                        <span class="number">3</span>
+                        <p><span class="step">STEP 3</span><br>ADD-ONS</p><br>
+                    </div>
+                    <div class="flex-container">
+                        <span class="number">4</span>
+                        <p ><span class="step">STEP 4</span><br>SUMMARY</p><br>
+                    </div>
+                </div>
+            </div>
+            <div class="text-box">
+                <h1>Select your plan</h1>
+                <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">You have the option of monthly or yearly billing.</p>
+                <div class="plan-grid">
+                    <form id="plan-form" action="addons.html">
+                        <input type="radio" name="plan-radio" id="arcade-radio" onclick="selectPlan(0)" style="display: none;">
+                        <input type="radio" name="plan-radio" id="advanced-radio" onclick="selectPlan(1)" style="display: none;">
+                        <input type="radio" name="plan-radio" id="pro-radio" onclick="selectPlan(2)" style="display: none;">
+                    </form>
+                    <label for="arcade-radio" class="plans">
+                        <div>
+                            <img src="assets/images/icon-arcade.svg" class="plan-icon" alt="arcade-icon"><br>
+                            <p>Arcade<br><span class="plan-prices">$9/mo</span></p>
+                        </div>
+                    </label>
+                    <label for="advanced-radio" class="plans">
+                        <div>
+                            <img src="assets/images/icon-advanced.svg"  class="plan-icon" alt="advanced-icon"><br>
+                            <p>Advanced<br><span class="plan-prices">$12/mo</span></p>
+                        </div>
+                    </label>
+                    <label for="pro-radio" class="plans">
+                        <div>
+                            <img src="assets/images/icon-pro.svg"  class="plan-icon" alt="pro-icon"><br>
+                            <p>Pro<br><span class="plan-prices">$15/mo</span></p>
+                        </div>
+                    </label>
+                </div>
+                <div id="duration-section">
+                    <p style="margin-right:20px; text-align: right;">Monthly</p>
+                    <div id="duration-switch">
+                        <input id="duration-checkbox" type="checkbox" onchange="switchDuration()">
+                        <label for="duration-checkbox" ></label>
+                    </div>
+                    <p  style="margin-left:20px; color:hsl(231, 11%, 63%);">Yearly</p>
+                </div>
+                <a href="index.html">
+                    <button id="goback-button" title="Go back" onclick="">Go Back</button>
+                </a>
+                <button id="next-button" title="Next Step" form="plan-form" onclick="planSelected()">Next Step</button>
+            </div>
+        </div>
+        <script src="styles.js"></script>
+    </body>
+</html>

@@ -1,0 +1,324 @@
+body {
+    font-family: ubuntu;
+    background-color: hsl(217, 100%, 97%);  /*Background color: Magnolia */
+    height: 100%;
+    margin:0px;
+    padding: 20%;
+}
+
+h1{
+    margin-bottom: 8px;
+}
+
+p{
+    font-family: ubuntu;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.main-box{
+    display: grid;
+    grid-template-columns:max-content auto;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: hsl(0, 0%, 100%); 
+    box-shadow: 10px 10px 2px 25apx lightblue;
+    max-width: 950px;
+}
+
+.img-box{
+    padding: 0px;
+    position: relative;
+}
+
+.inner-text{
+    color: white;
+    width:80%;
+    height:80%;
+    inset:5% 10% auto 10%;
+    position:absolute;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+}
+
+.number{  
+    margin-right:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border:1px solid white;
+
+}
+
+.text-box{
+    color: hsl(213, 96%, 18%);
+    position: relative;
+    /* display: grid; */
+    grid-template-columns: auto;
+    padding: 3% 15% 0;
+}
+/* 
+.details:valid{
+    border-color: hsl(213, 96%, 18%);
+} */
+
+
+.step {           /* span element for step number*/
+    color: hsl(231, 13%, 80%);
+    font-size: 12px;
+    font-weight: 400;
+    font-family: ubuntu;
+    margin-bottom: 3px;
+    display: inline-block;
+}
+
+.details{
+    font-weight: 500;
+    font-size: 16px;
+    font-family: ubuntu;
+    width: 95%;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+form{
+    position: relative;
+}
+
+form span{
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(211, 4, 4);
+    position: absolute;
+    display:inline;
+    right:0;
+    visibility: hidden;
+}
+
+::placeholder{
+    color: hsl(231, 11%, 63%);
+}
+
+
+.plan-grid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plans{
+    padding-top: 15px;
+    padding-left: 20px;
+    width:25%;
+    height: max-content;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.plan-prices {
+    color: hsl(231, 11%, 63%);
+    font-weight: 400;
+}
+
+.plans:hover{
+    border-color: hsl(213, 96%, 18%);
+}
+
+.plan-selected {
+    border-color: hsl(213, 96%, 18%);
+    background-color: hsl(228, 71%, 96%);
+}
+
+.plan-icon{
+    margin-bottom: 40px;
+}
+
+.total-box{
+    background-color: hsl(228, 71%, 96%);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.thank-box{
+    text-align: center;
+    padding:150px 0 0;
+}
+
+#duration-section{
+    display: grid;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: hsl(228, 71%, 96%);
+    grid-template-columns:46% max-content 46%;
+}
+
+#duration-switch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#duration-switch input{
+    display: none;
+}
+
+#duration-switch label{
+    display: block;
+    position: relative;
+    width:35px;
+    height:17px;
+    background-color: hsl(213, 96%, 18%);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#duration-switch label::before{
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    top: 2.5px;
+    left: 3px;
+    transition: 0.3s;
+}
+
+#duration-switch input:checked + label::before{
+    left: calc(100% - 14.5px);
+}
+
+.addon-grid{
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 20px;
+}
+
+.addons{
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+    align-items: center;
+    width:100%;
+    height: 70px;
+    border: 1px solid hsl(229, 24%, 87%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    cursor: pointer;
+    accent-color: hsl(243, 100%, 62%);
+}
+
+.addon-details{
+    margin-top: 3px;
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.addon-details:hover{
+    color:  hsl(243, 100%, 62%);
+}
+
+.addon-prices{
+    text-align: center;
+    color:hsl(243, 100%, 62%);
+    font-weight: 500;
+}
+
+.addons:hover{
+    border-color: hsl(213, 96%, 18%);
+}
+
+.addon-selected{
+    border-color: hsl(213, 96%, 18%);
+    background-color:  hsl(228, 71%, 96%);
+}
+
+.final-prices{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+    padding: 0px;
+    height: max-content;
+}
+
+.final-prices p{    /* p element inside final-prices div*/
+    margin: 0;
+}
+
+.gray-text{   
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+    font-size: 13px;
+    display: inline-block;
+}
+
+hr{
+    margin: 15px 0 20px;
+    color:  hsl(231, 13%, 80%);
+    font-weight: 100;
+}
+
+#total-price{
+    padding: 20px;
+}
+
+#next-button{
+    font-size: 16px;
+    font-family: ubuntu;
+    position:absolute;
+    border: none;
+    border-radius: 8px;
+    bottom:10%;
+    right: 15%;
+    width:120px;
+    height: 50px;
+    background-color: hsl(213, 96%, 18%);
+    color: white;
+    cursor: pointer;
+}
+
+#next-button[title="Confirm"]{
+    background-color: hsl(243, 100%, 62%);
+}
+
+#next-button[title="Confirm"]:hover{
+    background-color: hsl(243, 82%, 76%);
+}
+
+#next-button:hover{
+    background-color: hsl(213, 68%, 31%);
+}
+
+#goback-button{
+    font-size: 16px;
+    font-family: ubuntu;
+    position: absolute;
+    border: none;
+    width:100px;
+    height: 50px;
+    background-color: white;
+    bottom:10%;
+    left: 15%;
+    color:hsl(231, 11%, 63%);
+    cursor: pointer;
+}
+
+#goback-button:hover{
+    color: hsl(213, 96%, 18%);
+}
+
