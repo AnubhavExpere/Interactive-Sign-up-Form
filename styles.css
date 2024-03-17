@@ -1,9 +1,9 @@
 body {
     font-family: ubuntu;
     background-color: hsl(217, 100%, 97%);  /*Background color: Magnolia */
-    height: 100%;
     margin:0px;
-    padding: 20%;
+    padding: 4% 10%;
+    /* overflow: hidden; */
 }
 
 h1{
@@ -21,21 +21,27 @@ p{
     display: grid;
     grid-template-columns:max-content auto;
     border-radius: 15px;
+    margin-inline: auto;
     padding: 15px;
     background-color: hsl(0, 0%, 100%); 
     box-shadow: 10px 10px 2px 25apx lightblue;
-    max-width: 950px;
+    max-width: 800px;
+    min-width: 480px;
 }
 
 .img-box{
     padding: 0px;
     position: relative;
+    width: 274px;
+    height: 568px;
+    background-image: url('assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
 }
 
 .inner-text{
+    justify-content: center;
     color: white;
-    width:80%;
-    height:80%;
+    min-height:80%;
     inset:5% 10% auto 10%;
     position:absolute;
 }
@@ -59,8 +65,8 @@ p{
 
 .text-box{
     color: hsl(213, 96%, 18%);
-    position: relative;
-    /* display: grid; */
+    /* position: relative; */
+    display: grid;
     grid-template-columns: auto;
     padding: 3% 15% 0;
 }
@@ -278,13 +284,11 @@ hr{
 }
 
 #next-button{
+    float: right;
     font-size: 16px;
     font-family: ubuntu;
-    position:absolute;
     border: none;
     border-radius: 8px;
-    bottom:10%;
-    right: 15%;
     width:120px;
     height: 50px;
     background-color: hsl(213, 96%, 18%);
@@ -307,13 +311,10 @@ hr{
 #goback-button{
     font-size: 16px;
     font-family: ubuntu;
-    position: absolute;
     border: none;
     width:100px;
     height: 50px;
     background-color: white;
-    bottom:10%;
-    left: 15%;
     color:hsl(231, 11%, 63%);
     cursor: pointer;
 }
@@ -322,3 +323,72 @@ hr{
     color: hsl(213, 96%, 18%);
 }
 
+@media only screen and (max-width: 650px){
+    body{
+        padding: 0px;
+    }
+
+    .main-box{
+        min-width: 350px;
+        width: 100vw;
+        padding: 0px;
+        grid-template-columns: auto;
+        background-color:hsl(217, 100%, 97%) ;
+        justify-content: center;
+    }
+
+    .inner-text{
+        height:86px;
+    }
+
+    .img-box{
+        height: 200px;
+        width: 100vw;
+        background-size:cover ;
+        background-image: url('assets/images/bg-sidebar-mobile.svg');
+        position: relative;
+    }
+    .inner-text{
+        inset:2% 10% auto 10%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .text-box{
+        padding: 0 6%;
+        justify-content: center;
+    }
+
+    .number{
+        height: 40px;
+        width: 40px;
+        font-size: 1rem;
+        border-width: 1.5px;
+    }
+
+    .inner-content{
+        top:-60px;
+        position: relative;
+        padding: 25px;
+        border-radius: 10px;
+        background-color: white;
+        max-width: 400px;
+
+    }
+
+    .buttons{
+        width: 100vw;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    #next-button, #goback-button{
+        margin: 20px 6% 20px;
+    }
+
+    .flex-container p{
+        display: none;
+    }
+}

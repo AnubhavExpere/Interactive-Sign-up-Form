@@ -2,6 +2,7 @@
 <html>
     <header>
         <title>Multi-Step Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +11,6 @@
     <body>
         <div class="main-box">
             <div class="img-box">
-                <img src="assets/images/bg-sidebar-desktop.svg">
                 <div class="inner-text">
                     <div class="flex-container">
                         <span class="number">1</span>
@@ -31,39 +31,43 @@
                 </div>
             </div>
             <div class="text-box">
-                <h1>Finishing Up</h1>
-                <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">Double-check everything looks OK before confirming.</p>
-                <div class="total-box">
-                    <div class="final-prices">
-                        <p><span id="plan-type">Arcade</span> (<span id="plan-duration-1">Monthly</span>)<br>
-                            <a class="addon-details" href="plans.html"><u>Change</u></a>
-                        </p>
-                        <p style="text-align: right;">$<span id="plan-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                <div class="inner-content">
+                    <h1>Finishing Up</h1>
+                    <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">Double-check everything looks OK before confirming.</p>
+                    <div class="total-box">
+                        <div class="final-prices">
+                            <p><span id="plan-type">Arcade</span> (<span id="plan-duration-1">Monthly</span>)<br>
+                                <a class="addon-details" href="plans.html"><u>Change</u></a>
+                            </p>
+                            <p style="text-align: right;">$<span id="plan-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                        </div>
+                        <hr>
+                        <div class="final-prices">
+                            <p class="gray-text">Online service</p>
+                            <p style="text-align: right;">+$<span id="os-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                        </div>
+                        <div class="final-prices">
+                            <p class="gray-text">Larger storage</p>
+                            <p style="text-align: right;">+$<span id="ls-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                        </div>
+                        <div class="final-prices">
+                            <p class="gray-text">Customizable Profile</p>
+                            <p style="text-align: right;">+$<span id="cp-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="final-prices">
-                        <p class="gray-text">Online service</p>
-                        <p style="text-align: right;">+$<span id="os-amount">--</span>/<span class="periodic-price">mo</span></p><br>
-                    </div>
-                    <div class="final-prices">
-                        <p class="gray-text">Larger storage</p>
-                        <p style="text-align: right;">+$<span id="ls-amount">--</span>/<span class="periodic-price">mo</span></p><br>
-                    </div>
-                    <div class="final-prices">
-                        <p class="gray-text">Customizable Profile</p>
-                        <p style="text-align: right;">+$<span id="cp-amount">--</span>/<span class="periodic-price">mo</span></p><br>
+                    <div id="total-price" class="final-prices">
+                        <p class="gray-text">Total (per <span id="plan-duration-2">month</span>)</p>
+                        <p style="text-align: right; color: hsl(243, 100%, 62%);">$<span id="total-amount">--</span>/<span class="periodic-price">mo</span></p>
                     </div>
                 </div>
-                <div id="total-price" class="final-prices">
-                    <p class="gray-text">Total (per <span id="plan-duration-2">month</span>)</p>
-                    <p style="text-align: right; color: hsl(243, 100%, 62%);">$<span id="total-amount">--</span>/<span class="periodic-price">mo</span></p>
+                <div class="buttons">
+                    <a href="addons.html">
+                        <button id="goback-button" title="Go back">Go Back</button>
+                    </a>
+                    <a href="end.html">
+                        <button id="next-button" title="Confirm">Confirm</button>
+                    </a>
                 </div>
-                <a href="addons.html">
-                    <button id="goback-button" title="Go back">Go Back</button>
-                </a>
-                <a href="end.html">
-                    <button id="next-button" title="Confirm">Confirm</button>
-                </a>
             </div>
         </div>
         <script src="styles.js"></script>

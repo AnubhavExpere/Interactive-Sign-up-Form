@@ -2,6 +2,7 @@
 <html>
     <header>
         <title>Multi-Step Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,7 +11,6 @@
     <body>
         <div class="main-box">
             <div class="img-box">
-                <img src="assets/images/bg-sidebar-desktop.svg">
                 <div class="inner-text">
                     <div class="flex-container">
                         <span class="number">1</span>
@@ -31,37 +31,41 @@
                 </div>
             </div>
             <div class="text-box">
-                <h1>Pick add-ons</h1>
-                <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">Add-ons help enhance your gaming experience.</p>
-                <div class="addon-grid">
-                    <label for="online-service">
-                        <div class="addons">
-                            <input id="online-service" class="addon-check" onchange="selectAddon()" type="checkbox">
-                            <p>Online service<br><span class="addon-details">Access to multiplayer games</span></p>
-                            <p class="addon-prices">+$1/mo</p>
-                        </div>
-                    </label>
-                    <label for="larger-storage">
-                        <div class="addons">
-                            <input id="larger-storage" class="addon-check" onchange="selectAddon()" type="checkbox" >
-                            <p>Larger storage<br><span class="addon-details">Extra 1TB of cloud save</span></p>
-                            <p class="addon-prices">+$2/mo</p>
-                        </div>
-                    </label>
-                    <label for="custom-profile">
-                        <div class="addons">
-                            <input type="checkbox" class="addon-check" onchange="selectAddon()" id="custom-profile">
-                            <p>Customizable Profile<br><span class="addon-details">Custom theme on your profile</span></p>
-                            <p class="addon-prices">+$2/mo</p>
-                        </div>
-                    </label>
+                <div class="inner-content">
+                    <h1>Pick add-ons</h1>
+                    <p style="color: hsl(231, 11%, 63%); font-weight: 400; margin-top: 0px; margin-bottom: 30px;">Add-ons help enhance your gaming experience.</p>
+                    <div class="addon-grid">
+                        <label for="online-service">
+                            <div class="addons">
+                                <input id="online-service" class="addon-check" onchange="selectAddon()" type="checkbox">
+                                <p>Online service<br><span class="addon-details">Access to multiplayer games</span></p>
+                                <p class="addon-prices">+$1/mo</p>
+                            </div>
+                        </label>
+                        <label for="larger-storage">
+                            <div class="addons">
+                                <input id="larger-storage" class="addon-check" onchange="selectAddon()" type="checkbox" >
+                                <p>Larger storage<br><span class="addon-details">Extra 1TB of cloud save</span></p>
+                                <p class="addon-prices">+$2/mo</p>
+                            </div>
+                        </label>
+                        <label for="custom-profile">
+                            <div class="addons">
+                                <input type="checkbox" class="addon-check" onchange="selectAddon()" id="custom-profile">
+                                <p>Customizable Profile<br><span class="addon-details">Custom theme on your profile</span></p>
+                                <p class="addon-prices">+$2/mo</p>
+                            </div>
+                        </label>
+                    </div>
                 </div>
-                <a href="plans.html">
-                    <button id="goback-button" title="Go back">Go Back</button>
-                </a>
-                <a href="finish.html">                
-                    <button id="next-button" title="Next Step" onclick="addOnSubmit()">Next Step</button>
-                </a>
+                <div class="buttons">
+                    <a href="plans.html">
+                        <button id="goback-button" title="Go back">Go Back</button>
+                    </a>
+                    <a href="finish.html">                
+                        <button id="next-button" title="Next Step" onclick="addOnSubmit()">Next Step</button>
+                    </a>
+                </div>
             </div>
         </div>
         <script src="styles.js"></script>
